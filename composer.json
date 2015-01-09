@@ -1,12 +1,25 @@
 {
     "name": "adaoex/zf2-base",
-    "description": "Módulo 'Base' para projeto que utilize Zend Framework 2",
+    "description": "Módulo 'Base' para projeto que utilize Zend Framework 2, por @adaoex",
     "license": "BSD-3-Clause",
     "keywords": [
         "framework",
         "zf2"
     ],
+    "authors": [
+        {
+            "name": "Adão Gonçalves",
+            "email": "adao@adao.eti.br",
+            "homepage": "http://www.adao.eti.br"
+        }
+    ],
     "require": {
-        "php": ">=5.3.17"
+        "php": ">=5.3.17",
+        "zendframework/zendframework": "2.3.*",
+    },
+    "autoload": {
+        "psr-0": {
+            "Zf2Base": "src"
+        }
     }
 }
