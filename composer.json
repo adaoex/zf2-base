@@ -1,13 +1,12 @@
 {
-    "name": "adoaex/zf2-base",
-    "description": "ZF2 Base Module",
+    "name": "adaoex/zf2-base",
+    "description": "Módulo 'Base' para projeto que utilize Zend Framework 2",
     "license": "BSD-3-Clause",
     "keywords": [
         "framework",
         "zf2"
     ],
-    "homepage": "http://www.adao.eti.br/",
     "require": {
-        "php": ">=5.3.3",
+        "php": ">=5.3.17"
     }
 }
