@@ -7,7 +7,21 @@ em complemento ao [Zend Skeleton Application](https://github.com/zendframework/Z
  * [DoctrineORM](https://github.com/doctrine/DoctrineORMModule)
 
 ## Instalação (Instalation)
-	
+### Via composer
+```php
+"require": {
+    "adaoex/zf2-base": "dev-master"
+}
+```
+
+Registre o módulo no ZendSkeletonApplication
+```php
+'modules' => array(
+ // ..
+ 'ZF2Base',
+)
+```
+
 ## Módulo
 
 ### Form\Validator
@@ -33,7 +47,7 @@ retorna string no formato UTF-8, uma substring (acrescido de ... ), caso o $tama
 ```php
 $this->string()->truncar( $string, $tamanho );
 ```
-	
+
 ### ZF2Base\View\Helper\Numero
 	
 Retorna número por extenso
@@ -43,7 +57,7 @@ $this->numero( [$numero] );
 OU
 ```php
 $this->numero()->porExtenso( $numero );
-	```
+```
 	
 ### ZF2Base\View\Helper\Moeda
 Retorna número no formato brasileiro (locale: pt_BR, currency: BRL)
@@ -66,17 +80,16 @@ Retorna string formatada
 	$this->formata()->cpf( $string );
 	$this->formata()->telefone( $string );
 ```
-	
+
 ### ZF2Base\View\Helper\Data
 Tratamentos para Datas
 ```php
-	$this->data()->porExtenso( $data );
-	$this->data()->dataHora( $data );
+$this->data()->porExtenso( $data );
+$this->data()->dataHora( $data );
 ```
-	
-### Mail
 
-Configurações em ..\config\autoload\global.php
+### Mail
+* Configurações em ..\config\autoload\global.php
 ```php
 return array(
 	'mail' => array(
@@ -96,14 +109,14 @@ return array(
 
 Utilização em Controllers
 ```php
-	$transport = $this->getServiceLocator()->get("ZF2Base\Mail\Transport");
-	$view = $service = $this->getServiceLocator()->get("View");
-	$mail = new Mail($transport, $view, 'page-template');
-	$mail->setSubject( ... )
-			->setTo( ... )
-			->setData( ... )
-			->prepare()
-			->send();
+$transport = $this->getServiceLocator()->get("ZF2Base\Mail\Transport");
+$view = $service = $this->getServiceLocator()->get("View");
+$mail = new Mail($transport, $view, 'page-template');
+$mail->setSubject( ... )
+		->setTo( ... )
+		->setData( ... )
+		->prepare()
+		->send();
 ```
 
 ### ZF2Base\Controller
