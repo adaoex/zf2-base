@@ -13,8 +13,17 @@ namespace ZF2Base;
 return array(
     'controller_plugins' => array(
         'invokables' => array(
-            'Formatar' => 'ZF2Base\Controller\Plugin\Formatar',
-            'Data' => 'ZF2Base\Controller\Plugin\Data',
+            'Formatar'  => 'ZF2Base\Controller\Plugin\Formatar',
+            'Data'      => 'ZF2Base\Controller\Plugin\Data',
+        )
+    ),
+    'view_helpers' => array(
+        'invokables'=> array(
+            'formatar'  => 'ZF2Base\View\Helper\Formatar',
+            'data'      => 'ZF2Base\View\Helper\Data',
+            'moeda'     => 'ZF2Base\View\Helper\Moeda',
+            'numero'    => 'ZF2Base\View\Helper\Numero',
+            'string'    => 'ZF2Base\View\Helper\String',
         )
     ),
 );

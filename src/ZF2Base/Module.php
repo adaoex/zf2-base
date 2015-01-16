@@ -29,26 +29,11 @@ class Module {
 
     public function getAutoloaderConfig() {
         return array(
-            'Zend\Loader\ClassMapAutoloader' => array(
-                __DIR__ . '/../../autoload_classmap.php',
-            ),
             'Zend\Loader\StandardAutoloader' => array(
                 'namespaces' => array(
                     __NAMESPACE__ => __DIR__ . '/../../src/' . __NAMESPACE__,
                 ),
             ),
-        );
-    }
-
-    public function getViewHelperConfig() {
-        return array(
-            'invokables' => array(
-                'formatar' => new View\Helper\Formatar(),
-                'data' => new View\Helper\Data(),
-                'moeda' => new View\Helper\Moeda(),
-                'numero' => new View\Helper\Numero(),
-                'string' => new View\Helper\String(),
-            )
         );
     }
 

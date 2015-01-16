@@ -25,10 +25,12 @@ class Formatar extends AbstractHelper {
      *
      * @return Helper\Formatar
      */
-    public function __invoke() {
+    public function __invoke($valor = null) {
         $this->getPluginFormatar();
-        
-        return $this;
+        if ($valor == null){
+            return $this;
+        }
+        return $valor;
         
     }
     

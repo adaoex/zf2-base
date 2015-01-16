@@ -22,11 +22,10 @@ class String extends AbstractHelper {
      * @return String no formato UTF-8, independente do formado de entrada
      */
     public function __invoke( $string = null) {
-        if ( ! $string ){
-            return $this->toUTF8($string);
-        }else{
+        if ( $string == null ){
             return $this;
         }
+        return $this->toUTF8($string);
     }
 
      /**

@@ -23,9 +23,9 @@ class Data extends DateFormat {
      *
      * @return Helper\Data no formato 'pt_BR'
      */
-    public function __invoke( $date, $dateType = 2, $timeType = -1, $locale = NULL, $pattern = NULL ) {
+    public function __invoke( $date = null, $dateType = 2, $timeType = -1, $locale = NULL, $pattern = NULL ) {
         
-        if ( ! $date ){
+        if ( $date == null){
             $this->setData(new \DateTime());
         }else{
             $this->setData($date);

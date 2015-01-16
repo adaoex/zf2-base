@@ -19,8 +19,9 @@ class Moeda extends CurrencyFormat {
     /**
      * Retorna número no formato brasileiro (locale: pt_BR, currency: BRL)
      */
-    public function __invoke( $number, $curreny= null,$dec = null, $loc = null, $pattern = null ) {
-        if (! $number) {
+    public function __invoke( $number = null, $curreny= null,$dec = null, $loc = null, $pattern = null ) {
+        $this->valor = $number;
+        if ( $number == null) {
             return $this;
         }
         return $this->formataBr($number);
