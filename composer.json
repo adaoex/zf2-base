@@ -30,6 +30,9 @@
     "autoload": {
         "psr-0": {
             "ZF2Base": "src"
-        }
+        },
+        "classmap": [
+            "./Module.php"
+        ]
     }
 }
